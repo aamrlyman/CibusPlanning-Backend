@@ -54,7 +54,7 @@ def schedule_detail(request,schedule_id):
         serializer = Scheduled_MealSerializer(scheduled_meals, many=True )
         return Response(serializer.data)
     
-    if request.method == 'DELETE': #clear meal schedule
+    if request.method == 'DELETE': 
         scheduled_meals.delete()    
         return Response(status = status.HTTP_204_NO_CONTENT)
 

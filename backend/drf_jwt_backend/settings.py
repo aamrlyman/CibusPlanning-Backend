@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cibusPlanningBackend3-env.eba-ev3tkjjx.us-west-2.elasticbeanstalk.com', '127.0.0.1']
+ALLOWED_HOSTS = ['cibus-planning-backend-env.eba-csys5kdh.us-west-2.elasticbeanstalk.com', '127.0.0.1', '172.31.25.237', '172.31.4.244', '172.31.14.188']
 
 AUTH_USER_MODEL = 'authentication.User'
 
