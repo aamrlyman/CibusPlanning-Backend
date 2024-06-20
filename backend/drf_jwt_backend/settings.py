@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cibus-planning-backend-env.eba-csys5kdh.us-west-2.elasticbeanstalk.com',
+ALLOWED_HOSTS = ['https://cibus-planning-backend-1f18e73b11ef.herokuapp.com/',
                  '127.0.0.1', '172.31.25.237', '172.31.4.244', '172.31.14.188']
 
 AUTH_USER_MODEL = 'authentication.User'
