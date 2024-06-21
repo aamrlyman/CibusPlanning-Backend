@@ -28,7 +28,7 @@ ALLOWED_HOSTS = ['https://cibus-planning-backend-1f18e73b11ef.herokuapp.com',
                  '127.0.0.1', '172.31.25.237', '172.31.4.244', '172.31.14.188']
 
 AUTH_USER_MODEL = 'authentication.User'
-
+DEBUG = True
 
 # Application definition
 
@@ -163,6 +163,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(days=10),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=20),
 }
+
 
 try:
     from drf_jwt_backend.local_settings import *
