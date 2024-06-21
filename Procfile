@@ -1,1 +1,1 @@
-web:gunicorn drf_jwt_backend.wsgi
+web: gunicorn drf_jwt_backend.wsgi
