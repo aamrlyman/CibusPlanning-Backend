@@ -13,8 +13,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 import os
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://cibus-planning-backend-1f18e73b11ef.herokuapp.com',
-                 '127.0.0.1', '172.31.25.237', '172.31.4.244', '172.31.14.188']
+                 '127.0.0.1', '172.31.25.237', '172.31.4.244', '172.31.14.188', "aamrlyman.pythonanywhere.com"]
 
 AUTH_USER_MODEL = 'authentication.User'
 DEBUG = True
@@ -165,7 +168,15 @@ SIMPLE_JWT = {
 }
 
 
-try:
-    from drf_jwt_backend.local_settings import *
-except ImportError:
-    pass
+SECRET_KEY = os.getenv("SECRET_KEY")
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'aamrlyman$cibus_auror_db1_instance_1',
+        'USER': 'aamrlyman',
+        'PASSWORD': os.getenv("PASSWORD"),
+        'HOST': 'aamrlyman.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
+    }
+}
+
